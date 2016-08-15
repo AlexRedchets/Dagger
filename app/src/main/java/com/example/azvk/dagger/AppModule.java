@@ -1,34 +1,24 @@
 package com.example.azvk.dagger;
 
 import android.app.Application;
-import android.widget.Toast;
-
-import com.example.azvk.dagger.domain.DomainModule;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
 
-@Module(
-        injects = {
-                App.class
-        },
-        includes = {
-                DomainModule.class
-        }
-)
+@Module
 public class AppModule {
 
-    private App app;
+    private Application application;
 
-    public AppModule(App app) {
-        this.app = app;
+    public AppModule(Application application) {
+        this.application = application;
     }
 
     @Provides
     @Singleton
     public Application provideApplication(){
-        return app;
+        return application;
     }
 }
