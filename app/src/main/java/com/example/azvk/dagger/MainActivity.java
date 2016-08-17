@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((App)getApplication()).getNetComponent().inject(this);
+        //((App)getApplication()).getNetComponent().inject(this);
     }
 
     public void onClick(View vie){
