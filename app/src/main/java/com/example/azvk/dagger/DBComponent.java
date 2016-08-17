@@ -1,8 +1,11 @@
 package com.example.azvk.dagger;
 
-/**
- * Created by azvk on 2016-08-17.
- */
+import javax.inject.Singleton;
 
-public class DBComponent {
+import dagger.Component;
+
+@Singleton
+@Component(modules = DBModule.class)
+public interface DBComponent {
+    void inject(MainActivity activity);
 }
