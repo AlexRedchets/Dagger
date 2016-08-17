@@ -16,6 +16,10 @@ public class App extends Application {
                 .netModule(new NetModule("http://54.186.57.223:3000/"))
                 .build();
 
+        dbComponent = DaggerDBComponent.builder()
+                .dBModule(new DBModule(this))
+                .build();
+
 
     }
 

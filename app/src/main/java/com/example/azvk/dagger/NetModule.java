@@ -25,13 +25,13 @@ public class NetModule {
         this.baseURL = baseURL;
     }
 
-    // Dagger will only look for methods annotated with @Provides
+    /*// Dagger will only look for methods annotated with @Provides
     @Provides
     @Singleton
     // Application reference must come from AppModule.class
     SharedPreferences provideSharedPreferences(Application application){
         return PreferenceManager.getDefaultSharedPreferences(application);
-    }
+    }*/
 
     @Provides
     @Singleton

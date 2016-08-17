@@ -13,9 +13,15 @@ import io.realm.RealmConfiguration;
 @Module
 public class DBModule {
 
+    private Application application;
+
+    public DBModule(Application application) {
+        this.application = application;
+    }
+
     @Singleton
     @Provides
-    Realm provideRealm(Application application){
+    Realm provideRealm(){
         RealmConfiguration realmConfig = new RealmConfiguration
                 .Builder(application)
                 .deleteRealmIfMigrationNeeded()
